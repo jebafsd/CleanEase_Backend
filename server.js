@@ -26,7 +26,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server,{
     cors: {
-        origin: 'https://cleanease1.netlify.app', // Allow all origins, or specify allowed domains
+        origin: '*', // Allow all origins, or specify allowed domains
         methods: ['GET', 'POST']
     },
 });
@@ -56,8 +56,8 @@ io.on('connection', (socket) => {
 
 const PORT = process.env.PORT;
 
-//app.use(cors());
-app.use(cors({ origin: 'https://cleanease1.netlify.app' })); // Replace with your frontend URL
+app.use(cors());
+//app.use(cors({ origin: 'https://cleanease1.netlify.app' })); // Replace with your frontend URL
 app.use(bodyParser.json());
 
 app.use("/api/auth", authRoute);
