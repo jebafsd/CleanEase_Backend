@@ -26,7 +26,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server,{
     cors: {
-        origin: '*', // Allow all origins, or specify allowed domains
+        origin: 'https://cleanease1.netlify.app', // Allow all origins, or specify allowed domains
         methods: ['GET', 'POST']
     },
 });
