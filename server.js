@@ -71,6 +71,6 @@ app.use('/api/admin', AdminRoute);
 
 server.listen(PORT,()=>{
     console.log(`Server Running on Port - ${PORT}`)
-    //console.log(`MOngodburi - ${process.env.MONGODB_URI}`)
-    //console.log(`Email - ${process.env.GMAIL_ACC}`)
+    console.log(`MOngodburi - ${process.env.MONGODB_URI}`)
+    console.log(`Email - ${process.env.GMAIL_ACC}`)
 }) 
